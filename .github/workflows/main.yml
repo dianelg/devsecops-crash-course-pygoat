@@ -51,8 +51,8 @@ jobs:
    - name: Push image to Docker Hub
      run: | 
             docker login -u ${{ secrets.REPO_USER }} -p ${{ secrets.REPO_PWD }} 
-            docker tag myapp:latest dianelg/dgdemo/myapp:latest
-            docker push dianelg/dgdemo/myapp:latest
+            docker tag myapp:latest dianelg/dgdemo:version1
+            docker push dianelg/dgdemo:version1
 
    # - name: Docker Scout Scan
      # run: |
