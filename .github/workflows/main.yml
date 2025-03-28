@@ -37,6 +37,9 @@ jobs:
    - name: Checkout code
      uses: actions/checkout@v2
 
+   - name: Check daemon files
+     run: cat /etc/docker/daemon.json
+
    - name: Set up Docker
      uses: docker-practice/actions-setup-docker@v1
      with:
