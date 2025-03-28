@@ -49,7 +49,9 @@ jobs:
      run: docker build -f Dockerfile -t myapp:latest .
 
    - name: Push image to Docker Hub
-     run: docker push myapp:latest dianelg/dgdemo/myapp:latest
+     run: | 
+            docker tag myapp:latest dianelg/dgdemo/myapp:latest
+            docker push dianelg/dgdemo/myapp:latest
 
    # - name: Docker Scout Scan
      # run: |
